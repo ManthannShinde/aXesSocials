@@ -42,7 +42,7 @@ const PostForm = ({ post, action } : PostFormProps) => {
   async function onSubmit(values: z.infer<typeof PostValidation>) {
 
     if(post && action === 'Update'){
-      const updatedPost = await updatePost({
+      await updatePost({
         ...values,
         postId : post.$id,
         imageId : post?.imageId,
