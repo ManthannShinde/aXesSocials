@@ -182,7 +182,7 @@ export const useGetPosts = () => {
         
         return lastId ? Number(lastId) : null;
       },
-      initialPageParam: 0, // Set the initial page parameter here
+      initialPageParam: 1, // Set the initial page parameter here
     });
   };
   
