@@ -372,8 +372,8 @@ export async function getInfinitePosts({pageParam} : {pageParam : number}) {
         const posts = await databases.listDocuments(
             appwriteConfig.databaseId,
             appwriteConfig.postCollectionId,
-            queries,
-        )
+            queries
+        );
 
         if(!posts) throw Error;
 
