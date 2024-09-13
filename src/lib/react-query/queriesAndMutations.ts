@@ -148,14 +148,17 @@ export const useGetPosts = () => {
         if (!lastPage || lastPage.documents.length === 0) {
           return null;
         }
-      
+  
+        // Get the last document's ID for pagination and return it as a string
         const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
-        
-        return lastId ? Number(lastId) : null;
+  
+        return lastId || null; // Ensure it's a string or null
       },
-      initialPageParam: 0, 
+      initialPageParam: null, // Initialize with null since pageParam is a string
     });
   };
+  
+  
   
   
 
